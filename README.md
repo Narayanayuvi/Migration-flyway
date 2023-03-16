@@ -38,35 +38,33 @@ Step 2 :
       By using flyway migrate command in CMD.
 
 
+  
 Step 3 :
->Create new folder name release-1.0 
- ----------------------------------     
-Step 4 :
 >Create Migration Script V1.1__updatemobile_table.sql
 -----------------------------------------------------
         ALTER TABLE REGISTRATION_USERS 
         ADD COLUMN mobile VARCHAR(11) AFTER last_name;
 
-Step 5 : 
+Step 4 : 
 >Create Migration Script V1.2__Insertdata_users_table.sql
 ---------------------------------------------------------
         
         INSERT INTO REGISTRATION_USERS(username,first_name,last_name,email,mobile) VALUES('peravali narayana','peravali','narayana','peravalinarayana@gmail.com','7731052033');
         INSERT INTO REGISTRATION_USERS(username,first_name,last_name,email,mobile) VALUES('Bala sai','Bala','Sai','balasai@gmail.com','8886666973');
 
-Step 6 : 
+Step 5 : 
 >Create Migration Script V1.3__Dropcolumn_users_table.sql
 ----------------------------------------------------------
 
         ALTER TABLE registration_users DROP COLUMN first_name;
 
-Step 7 : 
+Step 6 : 
 >Apply Migration
 -----------------
 
       By using flyway migrate command in CMD.
 
-Step 8 : 
+Step 7 : 
 >Apply Info
 ------------ 
      
